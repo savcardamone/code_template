@@ -9,10 +9,10 @@ add_executable( dummy
 
 # Include the interfaces to libraries we're linking against
 target_include_directories( dummy
-   PUBLIC ${Template_SOURCE_DIR}/include GTest::GTest OpenCL::OpenCL
+   PUBLIC ${Template_SOURCE_DIR}/include GTest::GTest
 )
 
 # Include the libraries we're linking against
 target_link_libraries( dummy
-   LINK_PUBLIC template GTest::GTest OpenCL::OpenCL
+   LINK_PUBLIC template GTest::GTest
 )

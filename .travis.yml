@@ -1,7 +1,13 @@
-dist: trusty
+dist: focal
 sudo: false
 language: cpp
 
+addons:
+    apt:
+        sources:
+        packages:
+            - clang-11 libgtest-dev
+
 script:
-    - cmake .
+    - CXX=/usr/bin/clang++-11 CC=/usr/bin/clang++-11 cmake .
     - cmake --build . -- -j2

@@ -7,10 +7,5 @@ add_library( template
 
 # Include OpenCL headers
 target_include_directories( template
-   PUBLIC ${Template_SOURCE_DIR}/include OpenCL::OpenCL
-)
-
-# Link against OpenCL runtime
-target_link_libraries( template
-   LINK_PUBLIC OpenCL::OpenCL
+   PUBLIC ${Template_SOURCE_DIR}/include
 )
